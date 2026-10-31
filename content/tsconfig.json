@@ -1,0 +1,8 @@
+{
+  "extends": "@fant/config/tsconfig/library.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "resolveJsonModule": true
+  },
+  "include": ["src", "scripts", "test"]
+}

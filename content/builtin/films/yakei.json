@@ -1,0 +1,26 @@
+{
+  "id": "yakei",
+  "version": 1,
+  "name": {
+    "ja": "やけい",
+    "en": "City lights"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/yakei.png",
+    "sha256": "2dd0ea8c3386d9186a3e51112056e6edfa672f3cbaa107ebea9d6b14f9d63b45"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0,
+    "saturation": 0.1,
+    "contrast": 0.2,
+    "fade": 0.02,
+    "bloom": 0.5,
+    "sparkle": 0.15,
+    "vignette": 0.3,
+    "grain": 0.12
+  },
+  "dateStampByDefault": false
+}

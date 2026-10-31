@@ -1,0 +1,21 @@
+{
+  "id": "pastel",
+  "version": 1,
+  "name": {
+    "ja": "パステル",
+    "en": "Pastel"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "params": {
+    "warmth": 0.05,
+    "tint": 0.08,
+    "saturation": -0.25,
+    "contrast": -0.3,
+    "fade": 0.4,
+    "bloom": 0.25,
+    "vignette": 0.05,
+    "grain": 0.04
+  },
+  "dateStampByDefault": false
+}

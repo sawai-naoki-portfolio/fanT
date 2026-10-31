@@ -1,0 +1,13 @@
+{
+  "extends": ["expo/tsconfig.base", "@fant/config/tsconfig/strict.json"],
+  "compilerOptions": {
+    // Committed replacement for the generated, git-ignored expo-env.d.ts.
+    "types": ["expo/types"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "vitest.config.mts"],
+  // Test fakes run on Node.js and are checked with test/tsconfig.json.
+  "exclude": ["node_modules", "android", "ios", "test/fakes", "test/setup.ts"]
+}

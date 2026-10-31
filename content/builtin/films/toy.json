@@ -1,0 +1,23 @@
+{
+  "id": "toy",
+  "version": 1,
+  "name": {
+    "ja": "トイカメラ",
+    "en": "Toy camera"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "params": {
+    "warmth": 0.2,
+    "saturation": 0.4,
+    "contrast": 0.35,
+    "vignette": 0.8,
+    "grain": 0.2,
+    "chromaticAberration": 0.3
+  },
+  "lightLeak": {
+    "probability": 0.5,
+    "opacity": [0.3, 0.6]
+  },
+  "dateStampByDefault": true
+}

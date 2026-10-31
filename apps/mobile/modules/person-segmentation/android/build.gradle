@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.fant.personsegmentation'
+version = '0.1.0'
+
+android {
+  namespace "com.fant.personsegmentation"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+}
+
+dependencies {
+  // On-device selfie segmentation; the model ships with the app (03 §6: nothing is sent).
+  implementation "com.google.mlkit:segmentation-selfie:16.0.0-beta6"
+}

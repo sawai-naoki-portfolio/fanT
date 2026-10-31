@@ -1,0 +1,847 @@
+[
+  {
+    "id": "heart_pink",
+    "version": 1,
+    "name": {
+      "ja": "ハート",
+      "en": "Heart"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "heart_red",
+    "version": 1,
+    "name": {
+      "ja": "ハート（赤）",
+      "en": "Red heart"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#ff3b5c"
+    }
+  },
+  {
+    "id": "star_yellow",
+    "version": 1,
+    "name": {
+      "ja": "スター",
+      "en": "Star"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "star",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "sparkle_white",
+    "version": 1,
+    "name": {
+      "ja": "キラキラ",
+      "en": "Sparkle"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "sparkle",
+      "color": "#ffffff"
+    }
+  },
+  {
+    "id": "ribbon_pink",
+    "version": 1,
+    "name": {
+      "ja": "リボン",
+      "en": "Ribbon"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "ribbon",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "crown_gold",
+    "version": 1,
+    "name": {
+      "ja": "王冠",
+      "en": "Crown"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "crown",
+      "color": "#ffc93c"
+    }
+  },
+  {
+    "id": "flower_pink",
+    "version": 1,
+    "name": {
+      "ja": "お花",
+      "en": "Flower"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "flower",
+      "color": "#ffa6c9"
+    }
+  },
+  {
+    "id": "music_blue",
+    "version": 1,
+    "name": {
+      "ja": "音符",
+      "en": "Note"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "music",
+      "color": "#5aa9ff"
+    }
+  },
+  {
+    "id": "zuttomo",
+    "version": 1,
+    "name": {
+      "ja": "ズッ友"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "ズッ友",
+      "style": "outline",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "nikoichi",
+    "version": 1,
+    "name": {
+      "ja": "ニコイチ"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "ニコイチ",
+      "style": "outline",
+      "color": "#5aa9ff"
+    }
+  },
+  {
+    "id": "love",
+    "version": 1,
+    "name": {
+      "ja": "LOVE"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "LOVE",
+      "style": "neon",
+      "color": "#ff3b8d"
+    }
+  },
+  {
+    "id": "peace",
+    "version": 1,
+    "name": {
+      "ja": "ピース"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "ピース",
+      "style": "bubble",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "heart_neon",
+    "version": 1,
+    "name": {
+      "ja": "ネオンハート",
+      "en": "Neon heart"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#ff2bd6"
+    }
+  },
+  {
+    "id": "star_neon",
+    "version": 1,
+    "name": {
+      "ja": "ネオンスター",
+      "en": "Neon star"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "star",
+      "color": "#39f3ff"
+    }
+  },
+  {
+    "id": "sparkle_gold",
+    "version": 1,
+    "name": {
+      "ja": "ゴールドキラキラ",
+      "en": "Gold sparkle"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "sparkle",
+      "color": "#ffd84d"
+    }
+  },
+  {
+    "id": "ribbon_black",
+    "version": 1,
+    "name": {
+      "ja": "リボン（黒）",
+      "en": "Black ribbon"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "ribbon",
+      "color": "#2b2b2e"
+    }
+  },
+  {
+    "id": "crown_pink",
+    "version": 1,
+    "name": {
+      "ja": "ピンク王冠",
+      "en": "Pink crown"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "crown",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "flower_yellow",
+    "version": 1,
+    "name": {
+      "ja": "お花（黄）",
+      "en": "Yellow flower"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "flower",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "music_pink",
+    "version": 1,
+    "name": {
+      "ja": "音符（ピンク）",
+      "en": "Pink note"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "music",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "agepoyo",
+    "version": 1,
+    "name": {
+      "ja": "あげぽよ"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "あげぽよ",
+      "style": "neon",
+      "color": "#ff9a3c"
+    }
+  },
+  {
+    "id": "chobarigu",
+    "version": 1,
+    "name": {
+      "ja": "チョベリグ"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "チョベリグ",
+      "style": "outline",
+      "color": "#7ad94b"
+    }
+  },
+  {
+    "id": "gekikawa",
+    "version": 1,
+    "name": {
+      "ja": "激かわ"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "激かわ",
+      "style": "outline",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "moreta",
+    "version": 1,
+    "name": {
+      "ja": "盛れた"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "盛れた",
+      "style": "bubble",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "emoi",
+    "version": 1,
+    "name": {
+      "ja": "エモい"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "エモい",
+      "style": "neon",
+      "color": "#b26bff"
+    }
+  },
+  {
+    "id": "saikyo",
+    "version": 1,
+    "name": {
+      "ja": "最強"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "最強",
+      "style": "outline",
+      "color": "#ff3b5c"
+    }
+  },
+  {
+    "id": "seishun",
+    "version": 1,
+    "name": {
+      "ja": "青春"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "青春",
+      "style": "bubble",
+      "color": "#5aa9ff"
+    }
+  },
+  {
+    "id": "shikakatan",
+    "version": 1,
+    "name": {
+      "ja": "しか勝たん"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "しか勝たん",
+      "style": "outline",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "ukeru",
+    "version": 1,
+    "name": {
+      "ja": "超ウケる"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "超ウケる",
+      "style": "bubble",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "hearts3",
+    "version": 1,
+    "name": {
+      "ja": "♡♡♡"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "♡♡♡",
+      "style": "neon",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "bff",
+    "version": 1,
+    "name": {
+      "ja": "BFF"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "BFF",
+      "style": "neon",
+      "color": "#39f3ff"
+    }
+  },
+  {
+    "id": "heart_lavender",
+    "version": 1,
+    "name": {
+      "ja": "ハート（ラベンダー）",
+      "en": "Lavender heart"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#b9a3ff"
+    }
+  },
+  {
+    "id": "heart_white",
+    "version": 1,
+    "name": {
+      "ja": "ハート（白）",
+      "en": "White heart"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#ffffff"
+    }
+  },
+  {
+    "id": "star_pink",
+    "version": 1,
+    "name": {
+      "ja": "スター（ピンク）",
+      "en": "Pink star"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "star",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "star_blue",
+    "version": 1,
+    "name": {
+      "ja": "スター（水色）",
+      "en": "Blue star"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "star",
+      "color": "#7fd3ff"
+    }
+  },
+  {
+    "id": "sparkle_pink",
+    "version": 1,
+    "name": {
+      "ja": "キラキラ（ピンク）",
+      "en": "Pink sparkle"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "sparkle",
+      "color": "#ffb3d9"
+    }
+  },
+  {
+    "id": "ribbon_red",
+    "version": 1,
+    "name": {
+      "ja": "リボン（赤）",
+      "en": "Red ribbon"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "ribbon",
+      "color": "#ff3b5c"
+    }
+  },
+  {
+    "id": "flower_white",
+    "version": 1,
+    "name": {
+      "ja": "お花（白）",
+      "en": "White flower"
+    },
+    "tier": "free",
+    "art": {
+      "type": "shape",
+      "shape": "flower",
+      "color": "#ffffff"
+    }
+  },
+  {
+    "id": "heart_mint",
+    "version": 1,
+    "name": {
+      "ja": "ハート（ミント）",
+      "en": "Mint heart"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "heart",
+      "color": "#7ff0c8"
+    }
+  },
+  {
+    "id": "star_gold",
+    "version": 1,
+    "name": {
+      "ja": "ゴールドスター",
+      "en": "Gold star"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "star",
+      "color": "#ffc93c"
+    }
+  },
+  {
+    "id": "sparkle_blue",
+    "version": 1,
+    "name": {
+      "ja": "キラキラ（水色）",
+      "en": "Blue sparkle"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "sparkle",
+      "color": "#9fe8ff"
+    }
+  },
+  {
+    "id": "ribbon_lavender",
+    "version": 1,
+    "name": {
+      "ja": "リボン（ラベンダー）",
+      "en": "Lavender ribbon"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "ribbon",
+      "color": "#c7a6ff"
+    }
+  },
+  {
+    "id": "crown_silver",
+    "version": 1,
+    "name": {
+      "ja": "シルバー王冠",
+      "en": "Silver crown"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "crown",
+      "color": "#e3e6f0"
+    }
+  },
+  {
+    "id": "flower_lavender",
+    "version": 1,
+    "name": {
+      "ja": "お花（ラベンダー）",
+      "en": "Lavender flower"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "flower",
+      "color": "#c7a6ff"
+    }
+  },
+  {
+    "id": "music_yellow",
+    "version": 1,
+    "name": {
+      "ja": "音符（黄）",
+      "en": "Yellow note"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "shape",
+      "shape": "music",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "kawaii",
+    "version": 1,
+    "name": {
+      "ja": "かわいい",
+      "en": "Cute"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "かわいい",
+      "style": "outline",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "arigato",
+    "version": 1,
+    "name": {
+      "ja": "ありがと",
+      "en": "Thanks"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "ありがと",
+      "style": "bubble",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "happy",
+    "version": 1,
+    "name": {
+      "ja": "HAPPY"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "HAPPY",
+      "style": "neon",
+      "color": "#ffd93b"
+    }
+  },
+  {
+    "id": "omedeto",
+    "version": 1,
+    "name": {
+      "ja": "おめでと",
+      "en": "Congrats"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "おめでと",
+      "style": "outline",
+      "color": "#ff9a3c"
+    }
+  },
+  {
+    "id": "daisuki",
+    "version": 1,
+    "name": {
+      "ja": "だいすき",
+      "en": "Love you"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "だいすき",
+      "style": "neon",
+      "color": "#ff3b8d"
+    }
+  },
+  {
+    "id": "yabai",
+    "version": 1,
+    "name": {
+      "ja": "やばい",
+      "en": "OMG"
+    },
+    "tier": "free",
+    "art": {
+      "type": "text",
+      "text": "やばい",
+      "style": "bubble",
+      "color": "#b26bff"
+    }
+  },
+  {
+    "id": "oshikatsu",
+    "version": 1,
+    "name": {
+      "ja": "推し活"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "推し活",
+      "style": "outline",
+      "color": "#ff5fa2"
+    }
+  },
+  {
+    "id": "teetee",
+    "version": 1,
+    "name": {
+      "ja": "てぇてぇ"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "てぇてぇ",
+      "style": "neon",
+      "color": "#ff8fc7"
+    }
+  },
+  {
+    "id": "pien",
+    "version": 1,
+    "name": {
+      "ja": "ぴえん"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "ぴえん",
+      "style": "bubble",
+      "color": "#7fd3ff"
+    }
+  },
+  {
+    "id": "ikemen",
+    "version": 1,
+    "name": {
+      "ja": "イケメン"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "イケメン",
+      "style": "outline",
+      "color": "#5aa9ff"
+    }
+  },
+  {
+    "id": "tenshi",
+    "version": 1,
+    "name": {
+      "ja": "天使"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "天使",
+      "style": "neon",
+      "color": "#ffffff"
+    }
+  },
+  {
+    "id": "bestie",
+    "version": 1,
+    "name": {
+      "ja": "BESTIE"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "BESTIE",
+      "style": "neon",
+      "color": "#39f3ff"
+    }
+  },
+  {
+    "id": "lol",
+    "version": 1,
+    "name": {
+      "ja": "www"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "www",
+      "style": "bubble",
+      "color": "#7ad94b"
+    }
+  },
+  {
+    "id": "mecha",
+    "version": 1,
+    "name": {
+      "ja": "めちゃ好き"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "めちゃ好き",
+      "style": "outline",
+      "color": "#ff3b5c"
+    }
+  },
+  {
+    "id": "xoxo",
+    "version": 1,
+    "name": {
+      "ja": "XOXO"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "XOXO",
+      "style": "neon",
+      "color": "#ff2bd6"
+    }
+  },
+  {
+    "id": "jk",
+    "version": 1,
+    "name": {
+      "ja": "JK"
+    },
+    "tier": "premium",
+    "art": {
+      "type": "text",
+      "text": "JK",
+      "style": "outline",
+      "color": "#ff9a3c"
+    }
+  }
+]

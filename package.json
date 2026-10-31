@@ -1,0 +1,20 @@
+{
+  "name": "fant",
+  "private": true,
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": "^24.11.0"
+  },
+  "scripts": {
+    "check": "pnpm format:check && turbo run lint typecheck test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "prettier": "catalog:",
+    "turbo": "catalog:"
+  }
+}

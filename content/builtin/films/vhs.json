@@ -1,0 +1,24 @@
+{
+  "id": "vhs",
+  "version": 1,
+  "name": {
+    "ja": "ビデオ",
+    "en": "Video"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "params": {
+    "warmth": 0.05,
+    "tint": -0.15,
+    "saturation": -0.15,
+    "contrast": 0.1,
+    "fade": 0.15,
+    "chromaticAberration": 0.8,
+    "vignette": 0.3,
+    "grain": 0.2,
+    "lowRes": 0.5,
+    "jpegNoise": 0.2,
+    "bloom": 0.2
+  },
+  "dateStampByDefault": true
+}

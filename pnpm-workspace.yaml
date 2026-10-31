@@ -1,0 +1,56 @@
+packages:
+  - apps/*
+  - packages/*
+  - content
+  - functions
+
+# --- Supply-chain hardening ---------------------------------------------------
+# Ignore versions published less than 24h ago (most malicious releases are
+# detected and unpublished within that window).
+minimumReleaseAge: 1440
+# Refuse a version whose publish provenance is weaker than an earlier version's.
+trustPolicy: no-downgrade
+# Reviewed exceptions: legitimate releases published before npm provenance existed,
+# flagged only because newer majors of the same package carry attestations.
+trustPolicyExclude:
+  - semver@6.3.1 # 2023-07 ReDoS fix release, required by @babel/core
+# Dependency build scripts never run unless listed here as true.
+allowBuilds:
+  # The platform binary comes from @esbuild/<platform>; the script only re-checks it.
+  esbuild: false
+  # Firebase Admin: writes optional browser defaults / prints a version notice; not needed.
+  '@firebase/util': false
+  protobufjs: false
+# Fail installs on an incompatible Node.js instead of warning.
+engineStrict: true
+
+# Reviewed audit exceptions. Each entry: affected path, why it is not exploitable
+# here, and when to remove it. Re-check on every Expo SDK upgrade.
+audit:
+  ignore:
+    # node-forge <=1.4.0 (no patched release yet), via @expo/cli code-signing
+    # certificates. Build-time CLI only; expo-updates code signing is not used.
+    - GHSA-86w9-cpqp-85rv
+    # zod 3.x memory exhaustion (fixed only in zod 4), via @expo/cli validating
+    # local config. Build-time CLI only; never parses untrusted input in the app.
+    - GHSA-mrhx-c7xc-m3w5
+    # deepmerge prototype poisoning (no patched release yet), via @expo/config merging
+    # the project's own app config at build time. Not in the app bundle.
+    - GHSA-gcqx-w48m-w2h4
+
+# Shared versions for tooling used by more than one workspace package.
+# Expo / React Native dependencies are managed per app with `expo install`.
+catalog:
+  '@eslint/js': ^10.0.1
+  '@types/node': ^24.19.2
+  canvaskit-wasm: 0.41.0 # keep in sync with @shopify/react-native-skia's dependency
+  eslint: ^10.13.0
+  esbuild: ^0.28.2
+  prettier: ^3.9.10
+  tsx: ^4.23.15
+  turbo: ^2.11.10
+  typescript: ~6.0.3
+  typescript-eslint: ^8.72.0
+  vite: ^8.3.5
+  vitest: ^5.0.5
+  zod: ^4.6.7

@@ -1,0 +1,75 @@
+name: Native build
+
+# Compiles the generated iOS and Android projects, including the app's own native
+# modules (apps/mobile/modules), which the JS checks in CI cannot see. Heavier than
+# CI, so it runs only when the mobile app or its dependencies change (on any branch,
+# so native changes are compiled before a pull request exists).
+on:
+  push:
+    paths: ['apps/mobile/**', 'packages/**', 'pnpm-lock.yaml', '.github/workflows/native-build.yml']
+  pull_request:
+    paths: ['apps/mobile/**', 'packages/**', 'pnpm-lock.yaml', '.github/workflows/native-build.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Runs queue rather than cancel: a long native build is worth finishing.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  EXPO_NO_TELEMETRY: '1'
+  EXPO_OFFLINE: '1'
+  # Turns on the optional Instagram Stories module so it is compiled too (not a real ID).
+  FACEBOOK_APP_ID: '1234567890'
+
+jobs:
+  android:
+    name: Android (assembleDebug)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup
+      - name: Generate the native project
+        run: pnpm --filter @fant/mobile exec expo prebuild --platform android --no-install
+      - name: Compile
+        working-directory: apps/mobile/android
+        # The runner image ships the Android SDK and JDK 17.
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME_17_X64 }}
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+
+  ios:
+    name: iOS (simulator build)
+    runs-on: macos-26
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Expo SDK 58's prebuilt modules need Xcode 26; use the newest one on the image.
+      - name: Select Xcode 26
+        run: |
+          xcode=$(ls -d /Applications/Xcode_26*.app | sort -V | tail -n 1)
+          sudo xcode-select -s "$xcode"
+          xcodebuild -version
+      - uses: ./.github/actions/setup
+      - name: Generate the native project and install pods
+        run: pnpm --filter @fant/mobile exec expo prebuild --platform ios
+      - name: Compile
+        working-directory: apps/mobile/ios
+        run: |
+          workspace=$(ls -d *.xcworkspace | head -n 1)
+          xcodebuild \
+            -workspace "$workspace" \
+            -scheme "${workspace%.xcworkspace}" \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            build

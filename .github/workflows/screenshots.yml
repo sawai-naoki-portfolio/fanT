@@ -1,0 +1,125 @@
+name: Screenshots
+
+# Builds the app for the iOS simulator, walks through its screens with Maestro
+# (apps/mobile/e2e/screenshots.yaml) in Japanese, and commits the screenshots to
+# the `screenshots` branch so they can be viewed without downloading artifacts.
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/screenshots.yml', 'apps/mobile/e2e/**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  EXPO_NO_TELEMETRY: '1'
+  EXPO_OFFLINE: '1'
+
+jobs:
+  ios:
+    name: iOS simulator screenshots
+    runs-on: macos-26
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Select Xcode 26
+        run: |
+          xcode=$(ls -d /Applications/Xcode_26*.app | sort -V | tail -n 1)
+          sudo xcode-select -s "$xcode"
+      - uses: ./.github/actions/setup
+      - name: Generate the native project and install pods
+        run: pnpm --filter @fant/mobile exec expo prebuild --platform ios
+      - name: Build (Release, JS bundled in)
+        working-directory: apps/mobile/ios
+        run: |
+          workspace=$(ls -d *.xcworkspace | head -n 1)
+          xcodebuild \
+            -workspace "$workspace" \
+            -scheme "${workspace%.xcworkspace}" \
+            -configuration Release \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            build | tail -n 50
+      - name: Boot a Japanese iPhone simulator and install the app
+        run: |
+          udid=$(xcrun simctl list devices available -j \
+            | jq -r '[.devices | to_entries[] | select(.key | test("iOS")) | .value[] | select(.name | test("^iPhone"))][0].udid')
+          echo "UDID=$udid" >> "$GITHUB_ENV"
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid"
+          xcrun simctl spawn "$udid" defaults write -g AppleLanguages -array ja-JP
+          xcrun simctl spawn "$udid" defaults write -g AppleLocale ja_JP
+          xcrun simctl shutdown "$udid"
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid"
+          xcrun simctl status_bar "$udid" override --time 9:41 --batteryLevel 100 --cellularBars 4
+          # A landscape to import and edit, newest in the photo library.
+          xcrun simctl addmedia "$udid" apps/mobile/e2e/assets/landscape.jpg
+          app=$(ls -d apps/mobile/ios/build/Build/Products/Release-iphonesimulator/*.app | head -n 1)
+          xcrun simctl install "$udid" "$app"
+          for service in camera microphone photos photos-add; do
+            xcrun simctl privacy "$udid" grant "$service" com.fant.camera.dev || true
+          done
+      - name: Install Maestro
+        run: |
+          curl -fsSL "https://get.maestro.mobile.dev" | bash
+          echo "$HOME/.maestro/bin" >> "$GITHUB_PATH"
+      - name: Walk through the screens
+        working-directory: apps/mobile
+        env:
+          MAESTRO_DRIVER_STARTUP_TIMEOUT: '300000'
+          MAESTRO_CLI_NO_ANALYTICS: '1'
+        run: |
+          mkdir -p shots
+          cd shots
+          # A first screenshot without Maestro, so a run always shows whether the app starts.
+          xcrun simctl launch "$UDID" com.fant.camera.dev
+          sleep 30
+          xcrun simctl io "$UDID" screenshot 00-launch.png
+          xcrun simctl terminate "$UDID" com.fant.camera.dev || true
+          # Maestro's driver can be slow to start on CI simulators: give it time and one retry.
+          for attempt in 1 2; do
+            if maestro --device "$UDID" test ../e2e/screenshots.yaml; then break; fi
+            echo "::warning::Maestro attempt $attempt failed"
+          done
+          # Depending on the Maestro version, screenshots land beside the flow instead.
+          find .. -path ../node_modules -prune -o -name '*.png' -path '*e2e*' -print -exec mv {} . \;
+          ls -la
+      - name: Collect crash reports and logs
+        if: always()
+        working-directory: apps/mobile/shots
+        run: |
+          mkdir -p debug
+          # Maestro's own screenshots of failing steps and its log.
+          cp -R "$HOME"/.maestro/tests/* debug/ 2>/dev/null || true
+          # Newer Maestro versions keep takeScreenshot output with the test run.
+          find debug -path '*takeScreenshot*' -name '*.png' -exec cp {} . \;
+          # The full device log is hundreds of MB: keep only the app's own lines.
+          find debug -name 'device-simulator.log' | while read -r log; do
+            grep -a 'fanTDev\[' "$log" | tail -n 5000 > "${log%.log}-app.log" || true
+            rm -f "$log"
+          done
+          find debug -type f -size +50M -delete
+          # Simulator app crashes are reported on the host.
+          find "$HOME/Library/Logs/DiagnosticReports" -name '*.ips' -mmin -90 -exec cp {} debug/ \; || true
+          xcrun simctl spawn "$UDID" log show --last 15m --style compact \
+            --predicate 'processImagePath CONTAINS "fanT"' > debug/app.log 2>&1 || true
+          tail -n 200 debug/app.log || true
+          xcrun simctl io "$UDID" screenshot debug/last-screen.png || true
+          ls -laR debug | head -n 100
+      - name: Commit the screenshots to the screenshots branch
+        if: always()
+        working-directory: apps/mobile/shots
+        run: |
+          git init -q -b screenshots
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Screenshots of ${GITHUB_SHA}" || exit 0
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" screenshots

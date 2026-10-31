@@ -1,0 +1,27 @@
+{
+  "id": "puri",
+  "version": 1,
+  "name": {
+    "ja": "プリ",
+    "en": "Purikura"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/puri.png",
+    "sha256": "b65d2d29d4c71249142657fa6dc09d8e8c6ec220e2945a58207cc430183dad31"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0,
+    "tint": 0.1,
+    "saturation": 0.05,
+    "contrast": -0.05,
+    "fade": 0.05,
+    "bloom": 0.35,
+    "sparkle": 0.6,
+    "vignette": 0,
+    "grain": 0
+  },
+  "dateStampByDefault": false
+}

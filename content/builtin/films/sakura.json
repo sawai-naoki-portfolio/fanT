@@ -1,0 +1,22 @@
+{
+  "id": "sakura",
+  "version": 1,
+  "name": {
+    "ja": "さくら",
+    "en": "Sakura"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "params": {
+    "warmth": 0.1,
+    "tint": 0.2,
+    "saturation": 0.05,
+    "contrast": -0.1,
+    "fade": 0.2,
+    "bloom": 0.3,
+    "sparkle": 0.3,
+    "vignette": 0.1,
+    "grain": 0.03
+  },
+  "dateStampByDefault": false
+}

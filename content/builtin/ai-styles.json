@@ -1,0 +1,171 @@
+[
+  {
+    "id": "figure",
+    "version": 1,
+    "name": {
+      "ja": "フィギュア風",
+      "en": "Figure"
+    },
+    "description": {
+      "ja": "デスクに飾れる小さなフィギュアに",
+      "en": "A small collectible figure"
+    },
+    "credits": 1
+  },
+  {
+    "id": "illustration",
+    "version": 1,
+    "name": {
+      "ja": "イラスト風",
+      "en": "Illustration"
+    },
+    "description": {
+      "ja": "やさしい手描きイラストに",
+      "en": "A soft hand-drawn illustration"
+    },
+    "credits": 1
+  },
+  {
+    "id": "heisei_puri",
+    "version": 1,
+    "name": {
+      "ja": "平成プリ風",
+      "en": "Heisei Purikura"
+    },
+    "description": {
+      "ja": "2000年代のプリ帳から出てきたような1枚に",
+      "en": "Straight out of a 2000s sticker album"
+    },
+    "credits": 1
+  },
+  {
+    "id": "retro_magazine",
+    "version": 1,
+    "name": {
+      "ja": "レトロ雑誌風",
+      "en": "Retro Magazine"
+    },
+    "description": {
+      "ja": "90年代のファッション誌の表紙に",
+      "en": "A 90s fashion magazine cover"
+    },
+    "credits": 1
+  },
+  {
+    "id": "chibi",
+    "version": 1,
+    "name": {
+      "ja": "ちびキャラ風",
+      "en": "Chibi"
+    },
+    "description": {
+      "ja": "頭の大きなちびキャラに",
+      "en": "A cute big-headed mini character"
+    },
+    "credits": 1
+  },
+  {
+    "id": "clay",
+    "version": 1,
+    "name": {
+      "ja": "ねんど風",
+      "en": "Clay"
+    },
+    "description": {
+      "ja": "ころんとした粘土人形に",
+      "en": "A rounded clay doll"
+    },
+    "credits": 1
+  },
+  {
+    "id": "pixel_art",
+    "version": 1,
+    "name": {
+      "ja": "ドット絵風",
+      "en": "Pixel art"
+    },
+    "description": {
+      "ja": "レトロゲームのドット絵に",
+      "en": "Retro game pixel art"
+    },
+    "credits": 1
+  },
+  {
+    "id": "pop_art",
+    "version": 1,
+    "name": {
+      "ja": "ポップアート風",
+      "en": "Pop art"
+    },
+    "description": {
+      "ja": "カラフルなポップアートに",
+      "en": "Colourful pop art"
+    },
+    "credits": 1
+  },
+  {
+    "id": "sky_blue",
+    "version": 1,
+    "name": {
+      "ja": "青空に",
+      "en": "Blue sky"
+    },
+    "description": {
+      "ja": "空を、雲の浮かぶ青空に",
+      "en": "Turns the sky into a bright blue sky with clouds"
+    },
+    "credits": 1
+  },
+  {
+    "id": "sky_sunset",
+    "version": 1,
+    "name": {
+      "ja": "夕焼け空に",
+      "en": "Sunset sky"
+    },
+    "description": {
+      "ja": "空を夕焼けにして、全体を夕日の色に",
+      "en": "Turns the sky into a sunset and bathes the scene in its glow"
+    },
+    "credits": 1
+  },
+  {
+    "id": "sky_starry",
+    "version": 1,
+    "name": {
+      "ja": "星空に",
+      "en": "Starry night"
+    },
+    "description": {
+      "ja": "空を満天の星空にして、夜の風景に",
+      "en": "Turns the sky into a starry night"
+    },
+    "credits": 1
+  },
+  {
+    "id": "snow_scene",
+    "version": 1,
+    "name": {
+      "ja": "雪景色に",
+      "en": "Snowy scene"
+    },
+    "description": {
+      "ja": "風景をしんしんと雪の積もる冬景色に",
+      "en": "Covers the scene in fresh winter snow"
+    },
+    "credits": 1
+  },
+  {
+    "id": "night_lights",
+    "version": 1,
+    "name": {
+      "ja": "夜景に",
+      "en": "City lights"
+    },
+    "description": {
+      "ja": "街や風景を、明かりのきらめく夜景に",
+      "en": "Turns the scene into a glittering night view"
+    },
+    "credits": 1
+  }
+]

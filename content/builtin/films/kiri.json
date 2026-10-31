@@ -1,0 +1,25 @@
+{
+  "id": "kiri",
+  "version": 1,
+  "name": {
+    "ja": "きりのあさ",
+    "en": "Misty morning"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/kiri.png",
+    "sha256": "30b59d31b7c489b2f78a2ece69d2b2cdb11fa5c610de9595c49458574feb780a"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": -0.1,
+    "saturation": -0.1,
+    "contrast": -0.2,
+    "fade": 0.25,
+    "bloom": 0.4,
+    "vignette": 0.15,
+    "grain": 0.1
+  },
+  "dateStampByDefault": false
+}

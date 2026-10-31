@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["PersonSegmentationModule"]
+  },
+  "android": {
+    "modules": ["com.fant.personsegmentation.PersonSegmentationModule"]
+  }
+}

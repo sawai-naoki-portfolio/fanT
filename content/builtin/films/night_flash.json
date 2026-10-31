@@ -1,0 +1,25 @@
+{
+  "id": "night_flash",
+  "version": 1,
+  "name": {
+    "ja": "夜フラッシュ",
+    "en": "Night Flash"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/night_flash.png",
+    "sha256": "ebfdce86b84b434f4fe84a03f911c51e36643664c953f36804335c66f8a16e20"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": -0.05,
+    "saturation": 0.1,
+    "contrast": 0.3,
+    "fade": 0,
+    "bloom": 0.4,
+    "vignette": 0.5,
+    "grain": 0.15
+  },
+  "dateStampByDefault": true
+}

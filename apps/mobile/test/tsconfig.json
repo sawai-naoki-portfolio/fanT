@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    // The fakes stand in for native modules with Node.js APIs.
+    "types": ["expo/types", "node"]
+  },
+  "include": ["."],
+  "exclude": []
+}

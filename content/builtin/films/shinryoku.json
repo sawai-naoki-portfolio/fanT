@@ -1,0 +1,25 @@
+{
+  "id": "shinryoku",
+  "version": 1,
+  "name": {
+    "ja": "しんりょく",
+    "en": "Fresh green"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/shinryoku.png",
+    "sha256": "bfd09a25b035440dbcd718e52f89665cc5a55bbb50c754de8ee81ebd191a090a"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0.05,
+    "saturation": 0.1,
+    "contrast": 0.1,
+    "fade": 0.03,
+    "bloom": 0.1,
+    "vignette": 0.1,
+    "grain": 0.04
+  },
+  "dateStampByDefault": false
+}

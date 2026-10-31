@@ -1,0 +1,27 @@
+{
+  "name": "@fant/content-schema",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Types and validation for delivered content: films, characters, puri layouts, stamps and AI styles.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fant/filters": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@fant/config": "workspace:*",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}
