@@ -1,0 +1,28 @@
+{
+  "id": "ccd_2005",
+  "version": 1,
+  "name": {
+    "ja": "平成デジカメ",
+    "en": "Heisei Digicam"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/ccd_2005.png",
+    "sha256": "634d30c9983861fb03573984c7c4d106ebedb5fe0f2aca2c7484b0df7f4ad358"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0.05,
+    "saturation": 0.1,
+    "contrast": 0.1,
+    "fade": 0.05,
+    "bloom": 0.35,
+    "chromaticAberration": 0.15,
+    "vignette": 0.2,
+    "grain": 0.08,
+    "grainSize": 0.8,
+    "lowRes": 0.15
+  },
+  "dateStampByDefault": true
+}

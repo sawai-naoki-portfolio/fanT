@@ -1,0 +1,25 @@
+{
+  "id": "instant",
+  "version": 1,
+  "name": {
+    "ja": "インスタント",
+    "en": "Instant"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/instant.png",
+    "sha256": "00009788153202d1c6f16b602b7ea5255156d5306c584584404890ef665a3f00"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0.1,
+    "saturation": -0.1,
+    "contrast": -0.15,
+    "fade": 0.35,
+    "vignette": 0.25,
+    "grain": 0.12,
+    "bloom": 0.15
+  },
+  "dateStampByDefault": false
+}

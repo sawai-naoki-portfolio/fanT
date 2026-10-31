@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Lets the app check whether Instagram is installed (Android 11+ package visibility). -->
+  <queries>
+    <package android:name="com.instagram.android" />
+  </queries>
+  <application>
+    <!-- Shares only the app's scratch exports, read-only, with the app it grants. -->
+    <provider
+      android:name="com.fant.instagramstories.InstagramStoriesFileProvider"
+      android:authorities="${applicationId}.instagramstories"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/instagram_stories_paths" />
+    </provider>
+  </application>
+</manifest>

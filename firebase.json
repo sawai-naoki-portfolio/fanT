@@ -1,0 +1,22 @@
+{
+  "functions": [
+    {
+      "source": "functions/dist",
+      "runtime": "nodejs22",
+      "predeploy": ["pnpm --filter @fant/functions build"]
+    }
+  ],
+  "firestore": {
+    "rules": "firebase/firestore.rules",
+    "indexes": "firebase/firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "firebase/storage.rules"
+  },
+  "emulators": {
+    "functions": { "port": 5001 },
+    "firestore": { "port": 8080 },
+    "storage": { "port": 9199 },
+    "ui": { "enabled": true }
+  }
+}

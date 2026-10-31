@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["VolumeShutterModule"]
+  },
+  "android": {
+    "modules": ["com.fant.volumeshutter.VolumeShutterModule"]
+  }
+}

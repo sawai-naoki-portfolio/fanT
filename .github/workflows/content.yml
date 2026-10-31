@@ -1,0 +1,51 @@
+name: Content
+
+# Publishes content/ (manifest and assets) to the content bucket behind the CDN
+# (CNT-01/02, STU-05). Runs on main after CI has validated the content, or by hand.
+on:
+  push:
+    branches: [main]
+    paths: [content/**]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish content
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    # Only where the bucket is configured (repository variables, not secrets).
+    if: vars.CONTENT_BUCKET != ''
+    permissions:
+      contents: read
+      id-token: write # keyless Workload Identity Federation, no stored key
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup
+      # Validates the schema, hashes and LUT layout before anything is uploaded.
+      - run: pnpm --filter @fant/content test
+      - run: pnpm --filter @fant/content build
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_CONTENT_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
+      # Assets are named by content and never change: cache them for a year. The
+      # manifest is uploaded last and cached briefly, so it never names a missing file.
+      - name: Upload assets
+        run: >-
+          gcloud storage rsync content/dist "gs://${{ vars.CONTENT_BUCKET }}"
+          --recursive --exclude="^manifest\.json$"
+          --cache-control="public, max-age=31536000, immutable"
+      - name: Upload manifest
+        run: >-
+          gcloud storage cp content/dist/manifest.json "gs://${{ vars.CONTENT_BUCKET }}/manifest.json"
+          --cache-control="public, max-age=300"

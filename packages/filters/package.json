@@ -1,0 +1,25 @@
+{
+  "name": "@fant/filters",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SkSL shaders and parameter handling shared by the mobile app and the film studio.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json && tsc -p test/tsconfig.json"
+  },
+  "devDependencies": {
+    "@fant/config": "workspace:*",
+    "@types/node": "catalog:",
+    "canvaskit-wasm": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

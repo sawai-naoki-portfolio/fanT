@@ -1,0 +1,20 @@
+{
+  "id": "mono",
+  "version": 1,
+  "name": {
+    "ja": "モノクロ",
+    "en": "Mono"
+  },
+  "tier": "premium",
+  "pipeline": "film_v1",
+  "params": {
+    "warmth": 0,
+    "saturation": -1,
+    "contrast": 0.3,
+    "fade": 0.1,
+    "vignette": 0.35,
+    "grain": 0.3,
+    "grainSize": 1.2
+  },
+  "dateStampByDefault": false
+}

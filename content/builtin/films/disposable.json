@@ -1,0 +1,28 @@
+{
+  "id": "disposable",
+  "version": 1,
+  "name": {
+    "ja": "使い捨てカメラ",
+    "en": "Disposable"
+  },
+  "tier": "free",
+  "pipeline": "film_v1",
+  "lut": {
+    "path": "luts/disposable.png",
+    "sha256": "0fcf8fae96427cd0a1fc985632ecae8ed5a1cf761675287e67e5433747922767"
+  },
+  "params": {
+    "lutIntensity": 1,
+    "warmth": 0.25,
+    "fade": 0.2,
+    "vignette": 0.45,
+    "grain": 0.35,
+    "grainSize": 1.4,
+    "bloom": 0.1
+  },
+  "lightLeak": {
+    "probability": 0.5,
+    "opacity": [0.25, 0.6]
+  },
+  "dateStampByDefault": true
+}

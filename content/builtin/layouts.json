@@ -1,0 +1,296 @@
+[
+  {
+    "id": "two_cut",
+    "version": 1,
+    "name": {
+      "ja": "2コマ",
+      "en": "2 shots"
+    },
+    "tier": "free",
+    "width": 1000,
+    "height": 1500,
+    "cells": [
+      {
+        "x": 0.06,
+        "y": 0.06,
+        "width": 0.88,
+        "height": 0.385
+      },
+      {
+        "x": 0.06,
+        "y": 0.475,
+        "width": 0.88,
+        "height": 0.385
+      }
+    ],
+    "background": {
+      "color": "#ffe3ef",
+      "pattern": "dots",
+      "patternColor": "#ffffff"
+    },
+    "poses": [
+      {
+        "ja": "ピース！",
+        "en": "Peace!"
+      },
+      {
+        "ja": "推しのグッズを持って！",
+        "en": "Hold up your fave's merch!"
+      },
+      {
+        "ja": "みんなでハート！",
+        "en": "Make a heart together!"
+      }
+    ]
+  },
+  {
+    "id": "four_cut",
+    "version": 1,
+    "name": {
+      "ja": "4コマ",
+      "en": "4 shots"
+    },
+    "tier": "free",
+    "width": 1000,
+    "height": 1500,
+    "cells": [
+      {
+        "x": 0.06,
+        "y": 0.06,
+        "width": 0.425,
+        "height": 0.385
+      },
+      {
+        "x": 0.515,
+        "y": 0.06,
+        "width": 0.425,
+        "height": 0.385
+      },
+      {
+        "x": 0.06,
+        "y": 0.475,
+        "width": 0.425,
+        "height": 0.385
+      },
+      {
+        "x": 0.515,
+        "y": 0.475,
+        "width": 0.425,
+        "height": 0.385
+      }
+    ],
+    "background": {
+      "color": "#e6f0ff",
+      "pattern": "hearts",
+      "patternColor": "#ffffff"
+    },
+    "poses": [
+      {
+        "ja": "ピース！",
+        "en": "Peace!"
+      },
+      {
+        "ja": "推しのグッズを持って！",
+        "en": "Hold up your fave's merch!"
+      },
+      {
+        "ja": "みんなでハート！",
+        "en": "Make a heart together!"
+      },
+      {
+        "ja": "ほっぺをくっつけて！",
+        "en": "Cheek to cheek!"
+      }
+    ]
+  },
+  {
+    "id": "three_strip",
+    "version": 1,
+    "name": {
+      "ja": "3コマ",
+      "en": "3 shots"
+    },
+    "tier": "premium",
+    "width": 800,
+    "height": 1800,
+    "cells": [
+      {
+        "x": 0.08,
+        "y": 0.05,
+        "width": 0.84,
+        "height": 0.26
+      },
+      {
+        "x": 0.08,
+        "y": 0.335,
+        "width": 0.84,
+        "height": 0.26
+      },
+      {
+        "x": 0.08,
+        "y": 0.62,
+        "width": 0.84,
+        "height": 0.26
+      }
+    ],
+    "background": {
+      "color": "#fff6d6",
+      "pattern": "stripes",
+      "patternColor": "#ffd6e8"
+    },
+    "poses": [
+      {
+        "ja": "ピース！",
+        "en": "Peace!"
+      },
+      {
+        "ja": "推しのグッズを持って！",
+        "en": "Hold up your fave's merch!"
+      },
+      {
+        "ja": "みんなでハート！",
+        "en": "Make a heart together!"
+      }
+    ]
+  },
+  {
+    "id": "six_cut",
+    "version": 1,
+    "name": {
+      "ja": "6コマ",
+      "en": "6 shots"
+    },
+    "tier": "premium",
+    "width": 1200,
+    "height": 1800,
+    "cells": [
+      {
+        "x": 0.05,
+        "y": 0.05,
+        "width": 0.4375,
+        "height": 0.26
+      },
+      {
+        "x": 0.5125,
+        "y": 0.05,
+        "width": 0.4375,
+        "height": 0.26
+      },
+      {
+        "x": 0.05,
+        "y": 0.335,
+        "width": 0.4375,
+        "height": 0.26
+      },
+      {
+        "x": 0.5125,
+        "y": 0.335,
+        "width": 0.4375,
+        "height": 0.26
+      },
+      {
+        "x": 0.05,
+        "y": 0.62,
+        "width": 0.4375,
+        "height": 0.26
+      },
+      {
+        "x": 0.5125,
+        "y": 0.62,
+        "width": 0.4375,
+        "height": 0.26
+      }
+    ],
+    "background": {
+      "color": "#2b2b3a",
+      "pattern": "checker",
+      "patternColor": "#3c3c52"
+    },
+    "poses": [
+      {
+        "ja": "ピース！",
+        "en": "Peace!"
+      },
+      {
+        "ja": "推しのグッズを持って！",
+        "en": "Hold up your fave's merch!"
+      },
+      {
+        "ja": "みんなでハート！",
+        "en": "Make a heart together!"
+      },
+      {
+        "ja": "ほっぺをくっつけて！",
+        "en": "Cheek to cheek!"
+      },
+      {
+        "ja": "上目づかいで！",
+        "en": "Look up at the camera!"
+      },
+      {
+        "ja": "変顔チャンス！",
+        "en": "Funny face time!"
+      }
+    ]
+  },
+  {
+    "id": "four_strip",
+    "version": 1,
+    "name": {
+      "ja": "4コマ たて",
+      "en": "4-shot strip"
+    },
+    "tier": "premium",
+    "width": 600,
+    "height": 1800,
+    "cells": [
+      {
+        "x": 0.08,
+        "y": 0.04,
+        "width": 0.84,
+        "height": 0.2
+      },
+      {
+        "x": 0.08,
+        "y": 0.26,
+        "width": 0.84,
+        "height": 0.2
+      },
+      {
+        "x": 0.08,
+        "y": 0.48,
+        "width": 0.84,
+        "height": 0.2
+      },
+      {
+        "x": 0.08,
+        "y": 0.7,
+        "width": 0.84,
+        "height": 0.2
+      }
+    ],
+    "background": {
+      "color": "#ffffff",
+      "pattern": "plain",
+      "patternColor": "#ffffff"
+    },
+    "poses": [
+      {
+        "ja": "ピース！",
+        "en": "Peace!"
+      },
+      {
+        "ja": "推しのグッズを持って！",
+        "en": "Hold up your fave's merch!"
+      },
+      {
+        "ja": "みんなでハート！",
+        "en": "Make a heart together!"
+      },
+      {
+        "ja": "ほっぺをくっつけて！",
+        "en": "Cheek to cheek!"
+      }
+    ]
+  }
+]

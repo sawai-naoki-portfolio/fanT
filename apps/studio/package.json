@@ -1,0 +1,33 @@
+{
+  "name": "@fant/studio",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Film studio (internal tool): design films on the app's own shaders and export them as content.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fant/content-schema": "workspace:*",
+    "@fant/filters": "workspace:*",
+    "canvaskit-wasm": "catalog:",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@fant/config": "workspace:*",
+    "@fant/content": "workspace:*",
+    "@types/react": "~19.3.0",
+    "@types/react-dom": "~19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

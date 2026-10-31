@@ -1,0 +1,33 @@
+{
+  "name": "@fant/content",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Source of delivered content. builtin/ ships inside the app (CNT-05); remote/ is delivered only.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./bundled-assets": "./src/bundled-assets.ts"
+  },
+  "scripts": {
+    "generate:luts": "tsx scripts/generate-luts.ts",
+    "hash": "tsx scripts/hash-assets.ts",
+    "build": "tsx scripts/build-manifest.ts",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fant/content-schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@fant/config": "workspace:*",
+    "@fant/filters": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@fant/functions",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Cloud Functions: AI generation relay, credits, purchases webhook and analytics intake.",
+  "type": "module",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "firebase-admin": "14.5.0",
+    "firebase-functions": "7.4.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@fant/api-types": "workspace:*",
+    "@fant/config": "workspace:*",
+    "@types/node": "catalog:",
+    "esbuild": "catalog:",
+    "eslint": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}
