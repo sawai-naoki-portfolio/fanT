@@ -5,6 +5,7 @@
 | 版       | 2026-10-28                                                                                                                                                                                                                                                                                                                           |
 | 対象     | [02 機能要件](02-functional-requirements.md) の M（MVP必須）と T（MVP目標）                                                                                                                                                                                                                                                          |
 | 確認方法 | 単体テスト（Vitest）・型チェック・lint・JS バンドル・`expo prebuild` の権限検査・ネイティブビルド（CI の `native-build.yml`: Android の assembleDebug と、Xcode 26 での iOS シミュレーター向けビルド。ローカルモジュールを含む）・フィルムスタジオ（ブラウザ）での描画確認。**実機での動作確認はまだ**（下の「実機で確認すること」） |
+| CI での検証結果 | main（`86be828`、移植 PR #1 のマージ後）の CI（`ci.yml`）は成功。内訳は format:check・lint・typecheck・test（モバイルの Vitest は 50 ファイル・257 テストすべて成功）、ビルド、JS バンドル、`expo prebuild` の権限検査で、根拠は [Actions run](https://github.com/sawai-naoki-portfolio/fanT/actions/runs/41222808132)。ローカルでの `pnpm install` / `pnpm check` は未実行（実行環境の Node が 22.23.4 で、`engines` の `^24.11.0` を満たさず中断）。`security.yml` の依存関係監査は失敗（[run](https://github.com/sawai-naoki-portfolio/fanT/actions/runs/41220432099)、`node-forge` 等の脆弱性 13 件を報告）。`native-build.yml`・`screenshots.yml` の結果は未確認 |
 
 凡例: ✅ 実装済み（M・T はすべて実装済み） / L は対象外
 
