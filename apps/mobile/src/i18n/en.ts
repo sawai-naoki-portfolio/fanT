@@ -535,6 +535,8 @@ export const en: Strings = {
     version: 'Version',
     developerPremium: 'Enable Premium (testing)',
     performance: 'Show performance stats',
+    addSample: 'Add a sample photo to the album',
+    sampleAdded: 'Added a sample photo',
   },
   performance: {
     label: 'Performance stats',

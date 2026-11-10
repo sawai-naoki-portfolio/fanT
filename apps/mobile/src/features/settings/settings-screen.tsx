@@ -9,6 +9,7 @@ import { ScreenHeader } from '../../ui/screen-header';
 import { colors, spacing } from '../../ui/theme';
 import { applyOriginalRetention } from '../album/album-db';
 import { reportError } from '../analytics/analytics';
+import { importSample } from '../photo/import-photo';
 import { restorePurchases, usePremium } from '../purchases/purchases-store';
 import { ChoiceRow, InfoRow, LinkRow, Section, SwitchRow } from './settings-rows';
 import { EXPORT_SIZES, RETENTION_CHOICES, useSettings, WINK_ACTIONS } from './settings-store';
@@ -151,6 +152,19 @@ export function SettingsScreen() {
             value={settings.performanceOverlay}
             onChange={(performanceOverlay) => {
               update({ performanceOverlay });
+            }}
+          />
+          <LinkRow
+            label={strings.settings.addSample}
+            onPress={() => {
+              importSample()
+                .then(() => {
+                  showMessage(strings.settings.sampleAdded);
+                })
+                .catch((error: unknown) => {
+                  reportError(error, 'settings.sample');
+                  showError();
+                });
             }}
           />
         </Section>

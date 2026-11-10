@@ -546,6 +546,8 @@ export const ja = {
     version: 'バージョン',
     developerPremium: 'プレミアムを有効にする（テスト用）',
     performance: '性能の計測を表示',
+    addSample: '見本の写真をアルバムに追加',
+    sampleAdded: '見本の写真を追加したよ',
   },
   performance: {
     label: '性能の計測値',
