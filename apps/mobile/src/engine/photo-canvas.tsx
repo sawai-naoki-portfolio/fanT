@@ -6,7 +6,7 @@ import {
   type SkImage,
   type SkPicture,
 } from '@shopify/react-native-skia';
-import { useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { StyleSheet, View, type LayoutRectangle } from 'react-native';
 
 import { containRect, type Size } from '../features/photo/geometry';
@@ -35,6 +35,10 @@ export function PhotoCanvas({
   children,
 }: PhotoCanvasProps) {
   const [area, setArea] = useState<Size>({ width: 0, height: 0 });
+  // Photos are rendered on offscreen GPU surfaces, whose images the on-screen
+  // canvas (another thread and GPU context) cannot draw: show a CPU copy.
+  const shown = useMemo(() => image?.makeNonTextureImage() ?? null, [image]);
+  useEffect(() => () => shown?.dispose(), [shown]);
   const rect = containRect(photoSize, area.width > 0 ? area : { width: 1, height: 1 });
   const scale = rect.width / photoSize.width;
   return (
@@ -49,9 +53,9 @@ export function PhotoCanvas({
     >
       <Canvas style={StyleSheet.absoluteFill}>
         <Group transform={[{ translateX: rect.x }, { translateY: rect.y }, { scale }]}>
-          {image !== null && (
+          {shown !== null && (
             <Image
-              image={image}
+              image={shown}
               x={0}
               y={0}
               width={photoSize.width}

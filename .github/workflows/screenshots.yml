@@ -59,8 +59,6 @@ jobs:
           xcrun simctl boot "$udid"
           xcrun simctl bootstatus "$udid"
           xcrun simctl status_bar "$udid" override --time 9:41 --batteryLevel 100 --cellularBars 4
-          # A landscape to import and edit, newest in the photo library.
-          xcrun simctl addmedia "$udid" apps/mobile/e2e/assets/landscape.jpg
           app=$(ls -d apps/mobile/ios/build/Build/Products/Release-iphonesimulator/*.app | head -n 1)
           xcrun simctl install "$udid" "$app"
           for service in camera microphone photos photos-add; do

@@ -4,6 +4,7 @@ import { launchImageLibraryAsync } from 'expo-image-picker';
 
 import { developRaw } from '../../../modules/raw-develop/src';
 import { resizeJpeg } from '../../engine/photo';
+import { sampleLandscapeJpeg } from '../../engine/sample-landscape';
 import type { AlbumPhoto } from '../album/album-types';
 import { createPhoto } from './photo-service';
 import { neutralRecipe } from './recipe';
@@ -48,6 +49,11 @@ function addImport(bytes: Uint8Array): Promise<AlbumPhoto> {
 export async function importPhoto(): Promise<AlbumPhoto | null> {
   const file = await pickImageFile();
   return file === null ? null : addImport(await file.bytes());
+}
+
+/** Adds a drawn sample landscape to the album (developer builds only). */
+export function importSample(): Promise<AlbumPhoto> {
+  return addImport(sampleLandscapeJpeg());
 }
 
 /**
