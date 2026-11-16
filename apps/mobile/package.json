@@ -65,7 +65,7 @@
     "react-native-vision-camera-worklets": "5.2.3",
     "react-native-worklets": "0.13.0",
     "zod": "catalog:",
-    "zustand": "^5.0.16"
+    "zustand": "^5.1.0"
   },
   "devDependencies": {
     "@fant/config": "workspace:*",
